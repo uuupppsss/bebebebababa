@@ -1,0 +1,22 @@
+﻿<Window x:Class="DataTemplateAppSimple.GPUAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTemplateAppSimple"
+        mc:Ignorable="d"
+        Title="GPUAdd" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label Content="Название"/>
+            <TextBox Text="{Binding NewGPU.Title}"/>
+            <Label Content="Объём"/>
+            <TextBox Text="{Binding NewGPU.Capasity}"/>
+            <Label Content="Частота"/>
+            <TextBox Text="{Binding NewGPU.Frequency}"/>
+            <Label Content="Цена"/>
+            <TextBox Text="{Binding NewGPU.Price}"/>
+            <TextBlock Text="Закрой окно, чтобы добавить"/>
+        </StackPanel>
+    </Grid>
+</Window>
