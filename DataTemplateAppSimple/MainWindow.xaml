@@ -9,12 +9,15 @@
     <Window.Resources>
         <local:BrandConverter x:Key="convert"/>
         <local:ConveterImage x:Key="convert2"/>
+        <local:ConverterImageCPU x:Key="convCPU"/>
+        <local:ConverterImageGPU x:Key="convGPU"/>
+        <local:ConverterImageRAM x:Key="convRAM"/>
         <DataTemplate DataType="{x:Type local:CPU}">
             <StackPanel Orientation="Horizontal" >
                 <TextBlock Text="{Binding Brand}"/>
                 <TextBlock Text="{Binding Clock_frequency}"/>
                 <TextBlock Text="{Binding Price}"/>
-                <Image Source="{Binding Price, Converter = {StaticResource convert2}}" Width="50" Height="50"/>
+                <Image Source="{Binding Price, Converter = {StaticResource convCPU}}" Width="50" Height="50"/>
             </StackPanel>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:GPU}">
@@ -23,7 +26,7 @@
                 <TextBlock Text="{Binding Frequency}"/>
                 <TextBlock Text="{Binding Capacity}"/>
                 <TextBlock Text="{Binding Price}"/>
-                <Image Source="{Binding Price, Converter = {StaticResource convert2}}" Width="50" Height="50"/>
+                <Image Source="{Binding Price, Converter = {StaticResource convGPU}}" Width="50" Height="50"/>
             </StackPanel>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:RAM}">
@@ -32,7 +35,7 @@
                 <TextBlock Text="{Binding Frequency}"/>
                 <TextBlock Text="{Binding Capacity}"/>
                 <TextBlock Text="{Binding Price}"/>
-                <Image Source="{Binding Price, Converter = {StaticResource convert2}}" Width="50" Height="50"/>
+                <Image Source="{Binding Price, Converter = {StaticResource convRAM}}" Width="50" Height="50"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>

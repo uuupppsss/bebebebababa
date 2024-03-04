@@ -1,37 +1,28 @@
-﻿using DataTemplateAppSimple;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Printing.Interop;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Data;
 
 namespace DataTemplateAppSimple
 {
-    internal class ConveterImage : IValueConverter
+    internal class ConverterImageGPU : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            byte[] img=null;
+            byte[] img = null;
             decimal val = decimal.Parse(value.ToString());
-            string str = parameter.ToString();
-            if (str == "cpu")
+            if (val < 50000)
             {
-                if (val < 5000)
-                {
-                    img = File.ReadAllBytes("1.jpg");
-                }
-                else if (val > 5000)
-                {
-                    img = File.ReadAllBytes("2.jpg");
-                }
+                img = File.ReadAllBytes("1.jpg");
             }
-                
+            else if (val >= 50000)
+            {
+                img = File.ReadAllBytes("2.jpg");
+            }
             return img;
         }
 
