@@ -4,30 +4,46 @@
              xmlns:local="clr-namespace:DataTemplateAppSimple"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style TargetType="RadioButton">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontFamily" Value="Algerian"/>
+            <Setter Property="Background" Value="Black"/>
         </Style>
-        <Style TargetType="Button">
+        <Style TargetType="Button" x:Key="ChooseItemButton">
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="Width" Value="130"/>
+            <Setter Property="Width" Value="300"/>
             <Setter Property="Height" Value="60"/>
-            <Setter Property="Background" Value="LightPink"/>
+            <Setter Property="FontFamily" Value="Algerian"/>
+            <Setter Property="FontSize" Value="50"/>
+        </Style>
+        <Style TargetType="Button" >
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontFamily" Value="Chiller"/>
+            <Setter Property="Background" Value="#FFB5CCA8"/>
+            <Setter Property="BorderBrush" Value="#FFB5CCA8"/>
         </Style>
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="10"/>
             <Setter Property="Height" Value="70"/>
-            <Setter Property="Background" Value="Azure"/>
-            <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="red"/>
+            <Setter Property="FontFamily" Value="Chiller"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style TargetType="Label">
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="MistyRose"/>
-            <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Alegrian"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Foreground" Value="DarkRed"/>
         </Style>
     </Application.Resources>
 </Application>

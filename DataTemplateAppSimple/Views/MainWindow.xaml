@@ -41,21 +41,49 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFCF8106"/>
+                <GradientStop Color="#FF4F0303" Offset="1"/>
+                <GradientStop Color="#FF9D3C0A" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,173" Grid.RowSpan="2" >
             <Image Source="/1.jpg"/>
-            <TextBlock Text="Барахолка ППК" VerticalAlignment="Center" FontSize="48" FontFamily="Bahnschrift Condensed" Foreground="#FF00009F"/>
+            <TextBlock Text="Flea Market PPK" VerticalAlignment="Center" FontSize="48" FontFamily="Matura MT Script Capitals">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFB60000" Offset="0.755"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
         </StackPanel>
-        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Items}" Grid.Row="1" Background="AliceBlue"/>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Добавить процессор" Grid.Row="9" Height="60" Width="130"  Click="CPUAdd"/>
-            <Button Content="Добавить видеокарту" Grid.Row="9"  Height="60" Width="130" Click="GPUAdd_Click"/>
-            <Button Content="Добавить оперативку" Grid.Row="9"  Height="60" Width="130" Click="RAMAdd_Click"/>
-        </StackPanel>
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Items}" Grid.Row="1" Background="{x:Null}" Grid.ColumnSpan="2" BorderBrush="{x:Null}"/>
+        <Button Grid.Row="2" Content="Add Item" Click="AddItemClick" BorderBrush="{x:Null}" Style="{StaticResource ChooseItemButton}">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="OrangeRed" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </Window>

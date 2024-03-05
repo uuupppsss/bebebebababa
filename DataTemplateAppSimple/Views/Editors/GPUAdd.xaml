@@ -7,16 +7,21 @@
         mc:Ignorable="d"
         Title="GPUAdd" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFED882F"/>
+                <GradientStop Color="#FF701717" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <StackPanel>
-            <Label Content="Название"/>
+            <Label Content="Name"/>
             <TextBox Text="{Binding NewGPU.Title}"/>
-            <Label Content="Объём"/>
+            <Label Content="Volume"/>
             <TextBox Text="{Binding NewGPU.Capasity}"/>
-            <Label Content="Частота"/>
+            <Label Content="Frequency"/>
             <TextBox Text="{Binding NewGPU.Frequency}"/>
-            <Label Content="Цена"/>
+            <Label Content="Prise"/>
             <TextBox Text="{Binding NewGPU.Price}"/>
-            <TextBlock Text="Закрой окно, чтобы добавить"/>
         </StackPanel>
     </Grid>
 </Window>
