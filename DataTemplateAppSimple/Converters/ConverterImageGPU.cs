@@ -7,19 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace DataTemplateAppSimple
+namespace DataTemplateAppSimple.Converters
 {
-    internal class ConverterImageCPU : IValueConverter
+    internal class ConverterImageGPU : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             byte[] img = null;
             decimal val = decimal.Parse(value.ToString());
-            if (val < 1000)
+            if (val < 50000)
             {
                 img = File.ReadAllBytes("1.jpg");
             }
-            else if (val >= 1000)
+            else if (val >= 50000)
             {
                 img = File.ReadAllBytes("2.jpg");
             }

@@ -1,4 +1,4 @@
-﻿using DataTemplateAppSimple;
+﻿using DataTemplateAppSimple.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +13,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DataTemplateAppSimple
+namespace DataTemplateAppSimple.Editors
 {
     /// <summary>
-    /// Логика взаимодействия для RAMAdd.xaml
+    /// Логика взаимодействия для GPUAdd.xaml
     /// </summary>
-    public partial class RAMAdd : Window
+    public partial class GPUAdd : Window
     {
-        public RAM NewRAM { get; set; } = new RAM();
-        public RAMAdd()
+        public GPU NewGPU { get; set; } = new GPU();
+        public GPUAdd()
         {
             InitializeComponent();
             DataContext = this;

@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace DataTemplateAppSimple
+namespace DataTemplateAppSimple.Converters
 {
-    internal class ConverterImageRAM : IValueConverter
+    internal class ConverterImageCPU : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -19,7 +19,7 @@ namespace DataTemplateAppSimple
             {
                 img = File.ReadAllBytes("1.jpg");
             }
-            else if (val > 1000)
+            else if (val >= 1000)
             {
                 img = File.ReadAllBytes("2.jpg");
             }

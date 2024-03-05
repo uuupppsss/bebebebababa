@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using DataTemplateAppSimple.Editors;
+using DataTemplateAppSimple.Models;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,7 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DataTemplateAppSimple
+
+namespace DataTemplateAppSimple.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -50,30 +53,5 @@ namespace DataTemplateAppSimple
             ramWindow.ShowDialog();
             Items.Add(ramWindow.NewRAM);
         }
-    }
-
-    public class CPU
-    {
-        public string Brand { get; set; }
-        public float Clock_frequency { get; set; }
-        public decimal Price { get; set; }
-        public byte[] Img { get; set; }
-    }
-
-    public class GPU
-    {
-        public string Title { get; set; }
-        public int Capacity { get; set; }
-        public float Frequency { get; set; }
-        public decimal Price { get; set; }
-        public byte[] Img { get; set; }
-    }
-    public class RAM
-    {
-        public string Title { get; set; }
-        public int Capacity { get; set; }
-        public float Frequency { get; set; }
-        public decimal Price { get; set; }
-        public byte[] Img { get; set; }
     }
 }
